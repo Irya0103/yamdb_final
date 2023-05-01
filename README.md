@@ -53,3 +53,5 @@ DB_HOST=db
 DB_PORT=5432
 
 Авторы проекта: Андреева Ира, Александр Полукаров, Павел Смирнов.
+
+![example event parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
