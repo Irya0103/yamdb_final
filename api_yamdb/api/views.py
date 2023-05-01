@@ -11,7 +11,6 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import AccessToken
-
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
 
@@ -117,8 +116,8 @@ class UserSignUpView(APIView):
     """ViewSet класс для пользовательской регистрации."""
 
     def post(self, request):
-        USER_VALIDATE_ERROR = 'Имя пользователя уже занято.'
-        EMAIL_VALIDATE_ERROR = 'Электронная почта уже занята.'
+        user_validate_error = 'Имя пользователя уже занято.'
+        email_validate_error = 'Электронная почта уже занята.'
         serializer = UserSignUpSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         username = serializer.validated_data.get('username')
@@ -128,9 +127,9 @@ class UserSignUpView(APIView):
                 username=username, email=email)
         except IntegrityError:
             sign_up_error = (
-                EMAIL_VALIDATE_ERROR
+                email_validate_error
                 if User.objects.filter(email=email).exists()
-                else USER_VALIDATE_ERROR
+                else user_validate_error
             )
             return Response(
                 sign_up_error,
