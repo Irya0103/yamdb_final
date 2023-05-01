@@ -5,7 +5,6 @@ import csv
 from pathlib import Path
 
 from django.core.management import BaseCommand
-
 from reviews.models import Category, Comment, Genre, Review, Title
 from users.models import User
 
@@ -14,8 +13,8 @@ class Command(BaseCommand):
     help = 'Fills the database with data from csv-file in static folder'
 
     def handle(self, *args, **kwargs):
-        CSV_DIR = Path('static', 'data')
-        FILE_HANDLE = (
+        csv_dir = Path('static', 'data')
+        file_handle = (
             ('category.csv', Category, {}),
             ('genre.csv', Genre, {}),
             ('users.csv', User, {}),
@@ -24,14 +23,14 @@ class Command(BaseCommand):
             ('review.csv', Review, {'author': 'author_id'}),
             ('comments.csv', Comment, {'author': 'author_id'}),
         )
-        for file, model, replace in FILE_HANDLE:
+        for file, model, replace in file_handle:
             self.stdout.write(f'Начинаем импорт из файла {file}')
             self.stdout.write(f'{"---"*40}\n открываем файл {file}')
             file_path = Path('static', 'data', file)
             if not file_path.exists():
                 self.stderr.write(f'Файл {file} не найден')
                 continue
-            with open(Path(CSV_DIR, file), mode='r', encoding='utf8') as f:
+            with open(Path(csv_dir, file), mode='r', encoding='utf8') as f:
                 reader = csv.DictReader(f)
                 counter = 0
                 objects_to_create = []
