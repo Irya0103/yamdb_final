@@ -51,6 +51,7 @@ POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 DB_HOST=db
 DB_PORT=5432
+TOKEN=''
 
 Авторы проекта: Андреева Ира, Александр Полукаров, Павел Смирнов.
 
