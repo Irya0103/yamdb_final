@@ -48,7 +48,7 @@ jobs:
         with:
           push: true
           context: ./api_yamdb/
-          tags: Irya0103/yamdb:latest
+          tags: irya0103/yamdb:latest
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
