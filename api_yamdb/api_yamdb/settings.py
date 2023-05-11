@@ -13,7 +13,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '158.160.47.22',
     'web',
-    '*', ]
+    '*',
+]
 
 INSTALLED_APPS = [
     'django_filters',
