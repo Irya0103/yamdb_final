@@ -55,7 +55,7 @@ TOKEN=''
 
 Авторы проекта: Андреева Ира, Александр Полукаров, Павел Смирнов.
 
-![example event parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
+![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 
 http://158.160.47.22/admin/
 http://158.160.47.22/api/v1/
