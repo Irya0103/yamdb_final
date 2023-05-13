@@ -12,6 +12,7 @@ https://github.com/Irya0103
 На одно произведение пользователь может оставить только один отзыв.
 
 
+
 ### **Стек**
 ![python version](https://img.shields.io/badge/Python-3.7-green)
 ![django version](https://img.shields.io/badge/Django-2.2-green)
