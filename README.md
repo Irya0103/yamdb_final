@@ -1,6 +1,8 @@
 # Infra_sp2
 
-https://github.com/Irya0103
+![example workflow](https://github.com/Irya0103/yamdb_final/actions/workflows/main.yml/badge.svg)
+
+Я тебя добавила в репозитой 3 дня назад, пишет - "ждет ответа", еще раз добавила.
 
 ### Описание 
 Проект infra собирает отзывы (Review) пользователей на произведения (Titles).
@@ -59,14 +61,7 @@ TOKEN=''
 
 Авторы проекта: Андреева Ира, Александр Полукаров, Павел Смирнов.
 
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
-
 http://158.160.47.22/admin/
 http://158.160.47.22/api/v1/
 http://158.160.47.22/redoc/
 
-
-  sudo docker-compose exec -T web python manage.py makemigrations reviews
-            sudo docker-compose exec -T web python manage.py migrate
-            sudo docker-compose exec -T web python manage.py makemigrations users
-            sudo docker-compose exec -T web python manage.py migrate
