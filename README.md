@@ -64,3 +64,9 @@ TOKEN=''
 http://158.160.47.22/admin/
 http://158.160.47.22/api/v1/
 http://158.160.47.22/redoc/
+
+
+  sudo docker-compose exec -T web python manage.py makemigrations reviews
+            sudo docker-compose exec -T web python manage.py migrate
+            sudo docker-compose exec -T web python manage.py makemigrations users
+            sudo docker-compose exec -T web python manage.py migrate
