@@ -2,7 +2,6 @@
 
 ![example workflow](https://github.com/Irya0103/yamdb_final/actions/workflows/main.yml/badge.svg)
 
-Я тебя добавила в репозитой 3 дня назад, пишет - "ждет ответа", еще раз добавила.
 
 ### Описание 
 Проект infra собирает отзывы (Review) пользователей на произведения (Titles).
